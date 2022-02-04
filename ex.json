@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "title": "The Ashes 2021/22 - LIVE",
+      "description": "The Ashes: Australia set a massive 468-run target for England",
+      "subDescription": "Trending with Rory Burns"
+    },
+    {
+      "title": "Entertainment - Trending",
+      "description": "#Tollywood",
+      "subDescription": "1618 Tweets"
+    },
+    {
+      "title": "Entertainment - Live",
+      "description": "Dont't get caughtup in a web of spoilers, but Spider-Man : No Way Home hits theatres on Friday and reviews are crawling 🕷",
+      "subDescription": "Trending with Andrew Garfield"
+    }
+    
+  ]
+}
+
+// schema
+// title
+// description
+// sub-description
+//
+//
+//
+//

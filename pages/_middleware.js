@@ -1,0 +1,18 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { useState } from 'react';
+import { parseCookies } from '../utils/parseCookies';
+
+export function middleware(req) {
+  const { pathname } = req.nextUrl;
+
+  const cookies = parseCookies(req);
+
+  const token = req.cookies.token
+
+  // console.log(token);
+  if (!pathname.includes('/auth') && !token) {
+    return NextResponse.redirect('/auth/login');
+  } else if (pathname.includes('/auth') && token) {
+    return NextResponse.redirect('/');
+  }
+}

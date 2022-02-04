@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #000;
+    color:white
+  }
+
+  .bar-of-progress {
+    z-index: 50;
+  }
+}
+
+
+@layer components{
+  .hover-animation{
+    @apply hover:bg-slate-300 hover:bg-opacity-10 cursor-pointer rounded-full py-3 px-4 transition-all duration-500 ease-out
+  }
+
+  .error-msg{
+    @apply  text-red-600 -my-[5px] 
+  }
+}
