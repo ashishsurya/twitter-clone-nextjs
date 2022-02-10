@@ -70,7 +70,7 @@ export default function PostInput({ titleRef }) {
           onSubmit={handleTweetSubmit}
           className='flex-1 flex items-center justify-center space-x-2'
         >
-          <input
+          <textarea
             type='text'
             value={title}
             ref={titleRef}

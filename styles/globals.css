@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Poppins Font CDN from GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @layer base {
   body {
     background: #000;
-    color:white
+    color: white;
+    font-family:'Poppins', sans-serif;
   }
 
   .bar-of-progress {
@@ -13,13 +17,16 @@
   }
 }
 
-
-@layer components{
-  .hover-animation{
-    @apply hover:bg-slate-300 hover:bg-opacity-10 cursor-pointer rounded-full py-3 px-4 transition-all duration-500 ease-out
+@layer components {
+  .hover-animation {
+    @apply hover:bg-slate-300 hover:bg-opacity-10 cursor-pointer rounded-full py-3 px-4 transition-all duration-500 ease-out;
   }
 
-  .error-msg{
-    @apply  text-red-600 -my-[5px] 
+  .error-msg {
+    @apply text-red-600 -my-[5px];
+  }
+
+  .auth-input {
+    @apply text-base px-3 focus:outline-none bg-transparent border-sky-400 border py-2 rounded focus:ring-4 ring-sky-500 focus:ring-offset-2 ring-offset-gray-700;
   }
 }

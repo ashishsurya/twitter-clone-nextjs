@@ -9,7 +9,7 @@ import moment from 'moment';
 export default function Post({ userImg, profileName, userName, img, title, createdAt }) {
   const d = new Date(createdAt);
   return (
-    <div className='p-4 cursor-pointer border-b border-zinc-700'>
+    <div className='p-4 cursor-pointer border-b border-zinc-700 hover:bg-gray-600 hover:bg-opacity-30'>
       <div className='flex items-start justify-stretch space-x-3'>
         {/*header*/}
         <img
@@ -31,7 +31,7 @@ export default function Post({ userImg, profileName, userName, img, title, creat
             {/* time */}
             <p className='text-xs sm:text-sm text-gray-700'>{createdAt}</p>
           </div>
-          <p className='text-sm text-justify'>
+          <p className='text-sm text-justify whitespace-pre-line'>
             {title}
           </p>
           {img && (

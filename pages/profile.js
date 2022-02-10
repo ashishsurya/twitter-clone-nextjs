@@ -30,7 +30,7 @@ export default function ProfilePage({ trending }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const trending = await fetch('https://jsonkeeper.com/b/L9MH').then((res) =>
     res.json()
   );

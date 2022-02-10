@@ -3,8 +3,11 @@ import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import Cookie from 'js-cookie';
 import { useRouter } from 'next/router';
+import {useState} from "react"
+import Head from 'next/head';
 
 export default function LoginPage() {
+  const [loading, setloading] = useState(false);
   const router = useRouter();
   const {
     register,
@@ -13,6 +16,7 @@ export default function LoginPage() {
   } = useForm();
 
   const onSubmit = async (data) => {
+    setloading(true)
     const d = await fetch('/api/auth/login', {
       method: 'POST',
       'Content-Type': 'application/json',
@@ -33,13 +37,17 @@ export default function LoginPage() {
     if (d.error) {
       alert(`${d.error}`);
     }
+    setloading(false)
   };
 
   return (
     <div className='flex items-center flex-col justify-center min-h-screen'>
+      <Head>
+        <title>Sign In - Twitter</title>
+      </Head>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className='flex flex-col justify-start space-y-5 p-6 border border-zinc-700 sm:w-[500px] w-5/6 bg-opacity-60  bg-gray-700 rounded'
+        className='flex flex-col justify-start space-y-5 p-6 border border-zinc-700 sm:w-[500px] w-5/6 bg-opacity-60  bg-gray-700 rounded !font-poppins'
       >
         <div className='flex items-center justify-center space-x-4'>
           <img
@@ -76,8 +84,6 @@ export default function LoginPage() {
             type={'password'}
             {...register('password', {
               required: true,
-              maxLength: 10,
-              minLength: 6,
             })}
             placeholder='Enter password'
             id='password'
@@ -97,7 +103,7 @@ export default function LoginPage() {
           type='submit'
           className='font-mono p-3 rounded bg-sky-400 hover:bg-opacity-90 tracking-wide'
         >
-          LOGIN
+          {loading ? "...." : "LOGIN"}
         </button>
         <p className='underline text-blue-400 cursor-pointer text-center'>
           <Link href={'/auth/register'}>Register Here</Link>
