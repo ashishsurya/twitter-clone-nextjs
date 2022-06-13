@@ -4,6 +4,10 @@
 
 A Twitter build for educational purposes
 
+# How To Install
+```sh
+git clone 
+```
 
 # Future Features
 
