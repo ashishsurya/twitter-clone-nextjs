@@ -6,7 +6,10 @@ A Twitter build for educational purposes
 
 # How To Install
 ```sh
-git clone 
+git clone https://github.com/ashishsurya/twitter-clone-nextjs.git
+cd twitter-clone-nextjs
+yarn
+yarn dev
 ```
 
 # Future Features
