@@ -5,6 +5,9 @@
 A Twitter build for educational purposes
 
 # How To Install
+
+> .env file was also pushed to git because this is for educational purpose
+
 ```sh
 git clone https://github.com/ashishsurya/twitter-clone-nextjs.git
 cd twitter-clone-nextjs
