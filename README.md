@@ -18,6 +18,7 @@ yarn dev
 # Future Features
 
  - Using cloud storage providers for storing the images , for now they are base-64 pngs
+ - Update the profile page similar to that of Twitter
 
 
 Stack used : Next.js, Prisma, SQLite, Tailwindcss
