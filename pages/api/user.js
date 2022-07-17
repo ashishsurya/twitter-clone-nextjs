@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       await prisma.user
         .findFirst({ where: { username: { equals: username } } })
         .then((v) => {
-          res.json({ data: { username: v.username, id: v.id, name: v.name } });
+          res.json({ data: { username: v.username, id: v.id, name: v.name,imageUrl : v.imageUrl } });
         });
     } else {
       res.json({ message: 'No user currently logged in.' });

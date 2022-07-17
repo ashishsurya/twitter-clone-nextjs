@@ -1,5 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { useState } from 'react';
+import { NextResponse } from 'next/server';
 import { parseCookies } from '../utils/parseCookies';
 
 export function middleware(req) {
